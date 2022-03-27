@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -139,15 +139,20 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">W3 << <a href='W3.html'>Previous</a> <a href='新增倉儲步驟.html'>Next</a> >> 新增倉儲步驟<br /><h1>小組名單</h1>
-<p>組長: 40923123林坪橙  </p>
-<p><a href="https://40923123.github.io/cd2022/content/index.html">網站</a>  <a href="https://github.com/40923123/cd2022">倉儲</a></p>
-<p>組員: 40923139夏永晉</p>
-<p><a href="https://40923139.github.io/cd2022/content/index.html">網站</a>  <a href="https://github.com/40923139/cd2022">倉儲</a></p>
-<p>組員: 40923142翁楷翔</p>
-<p><a href="https://40923142.github.io/cd2022/content/index.html">網站</a>  <a href="https://github.com/40923142/cd2022">倉儲</a></p>
-<p>組員: 40923151許睿麒</p>
-<p><a href="https://40923151.github.io/cd2022/content/index.html">網站</a>  <a href="https://github.com/40923151/cd2022">倉儲</a></p><br />W3 << <a href='W3.html'>Previous</a> <a href='新增倉儲步驟.html'>Next</a> >> 新增倉儲步驟</div>
+    <div id="tipue_search_content">問題集中串 << <a href='問題集中串.html'>Previous</a> <a href='關於git指令失效.html'>Next</a> >> 關於git指令失效<br /><h1>關於協同</h1>
+<p>這一篇是我關於協同部分所寫的文章(僅供個人思想</p>
+<p>問題:</p>
+<h4>首先進行第一種猜想(能否讓所有組員同時進行倉儲修改?</h4>
+<p>目前的答案為否</p>
+<p>1.進行改版在上傳時是需要個人的KEY的，如果依字面上若想做倒他人也能上傳勢必要有倉儲組長個人的key，但是測試過key是沒有辦法多個帳號共用</p>
+<p>2.PPK同理一個PPK只能登記在一個帳號無法共用所以目前無法同時更新</p>
+<h4>第二種猜想(假設可以同時更新那解決版本衝突得如何運行</h4>
+<p>1.第一種情況如果一個文本在序列第40行後增加字串，那如果第二人在之後也以先前未改版版本進行並也在第40行之後進行更改兩邊發生衝突該如何解決?</p>
+<p>我的想法是因該可以寫一段程式幫每則增加的訊息在添加之前把他們上一句進行標記，當今天標記衝突時程式可以跳出訊息並將此段訊息銜接在另一段上，也就是在推送之前先把別人的資料pull下來發現標記有更動則自動變更到新訊息的最後一行在推送</p>
+<p>2.第二種強況如在修改的檔案被人刪除時應該怎麼辦，簡單來說每則訊息甚至檔案都是有所謂的贆投如果今天在修改時標頭不見時會讓檔案無法分類進而導致錯亂，關於標題頭問題我之前有遇到類似的，USB裡的檔案貌似在退出時手續不對導致標題頭遺失，電腦沒有辦法綁資料分類導致所有相關檔案全部變成亂碼並且無法判斷數量及大小，目前個人猜想如果在編輯檔案時直接被其他人刪除時，在推送時應該會出現類似的問題，要修改的檔案被刪除電腦無法判斷訊息是被歸類在哪裡進而出現錯誤</p>
+<p>我的想法目前也只能將此段訊息用一個程式幫忙賦予新的檔案讓他在出現類似錯誤時先直接開新的檔案紀錄下來，後面再進行除錯</p>
+<h4>第三種猜想(關於程式協同及機械類的協同</h4>
+<p>課堂上老師說過程式協同其實相比於機械的協同是可以比較即時的，因為機械相關在協同是必須去與真實情況變動，並且機械及真實受限於很多的規則束腹很難做到非常及時的協同，畢竟很多零件並不像程式一樣隨叫隨到</p><br />問題集中串 << <a href='問題集中串.html'>Previous</a> <a href='關於git指令失效.html'>Next</a> >> 關於git指令失效</div>
         
     <!-- footer -->
       <div class="container">

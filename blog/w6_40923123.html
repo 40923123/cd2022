@@ -59,7 +59,7 @@
 <meta property="og:url" content="./w6_40923123.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-03-30 11:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-03-30 16:15:36+08:00"/>
+<meta property="article:modified_time" content="2022-03-30 16:33:24+08:00"/>
 <meta property="article:author" content="./author/yen.html">
 <meta property="article:section" content="Misc"/>
 <meta property="article:tag" content="w6_40923123"/>
@@ -74,7 +74,7 @@
   "name": "2022 協同產品設計",
   "headline": "2022 協同產品設計",
   "datePublished": "2022-03-30 11:00:00+08:00",
-  "dateModified": "2022-03-30 16:15:36+08:00",
+  "dateModified": "2022-03-30 16:33:24+08:00",
   "author": {
     "@type": "Person",
     "name": "yen",
@@ -241,8 +241,19 @@ init_mathjax();
 <p>我的想法目前也只能將此段訊息用一個程式幫忙賦予新的檔案讓他在出現類似錯誤時先直接開新的檔案紀錄下來，後面再進行除錯</p>
 <p>第三種猜想(關於程式協同及機械類的協同
 課堂上老師說過程式協同其實相比於機械的協同是可以比較即時的，因為機械相關在協同是必須去與真實情況變動，並且機械及真實受限於很多的規則束腹很難做到非常及時的協同，畢竟很多零件並不像程式一樣隨叫隨到</p>
-<h2>Flutter</h2>
-<p>Flutter 可以用來開發跨 Apple 與 Android 手機與平板上的 Apps</p>
+<h2>關於git指令失效</h2>
+<p>事情緣由是由2022/03/22晚上在製作影片時發生目前還未知的問題進而導致git指令失效，目前推測原因還是未知，首先推送檔案並未超過(單個檔案&gt;50MB，再者前面也有推送但是沒有問題，所以目前無法判斷有何種問題</p>
+<p>解決方法: 將整個近端資料夾刪除後再從github上重新複製下來就沒有問題，關於git並未更改其他東西只是在其他電腦時就自行解決了，有可能是git在運行時path錯亂沒有讀到相關git的執行檔所以才導致至些問題的</p>
+<h2>W3 NX教學影片製作</h2>
+<p>第1部: <a href="https://40923123.github.io/cd2022/downloads/2022031501.mp4">影片網址1</a>
+第9部: <a href="https://40923123.github.io/cd2022/downloads/2022031502.mp4">影片網址9</a>
+第14部: <a href="https://40923123.github.io/cd2022/downloads/2022032101.mp4">影片網址14</a>
+第19部: <a href="https://40923123.github.io/cd2022/downloads/2022032201.mp4">影片網址19</a>
+第31部: <a href="https://40923123.github.io/cd2022/downloads/2022032202.mp4">影片網址31</a></p>
+<h2>新增倉儲步驟</h2>
+<p>原本cmsimde的內容主分支是master所以一開始他會因為遠端是main而無法推送，所以在近端新增main分支並將master merge到main裡，先用git remote add origin建立連結，然後在main的情況下把遠端的 README.md給pull下來</p>
+<p>簡單來說就是cmsimde本身是屬於master而遠端是main所以主要的大問題是處理分支衝突</p>
+<p>下方有影片可以點進去看裡面有詳細步驟還有字幕</p>
             </section>
 
             <section class="post-info">

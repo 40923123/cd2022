@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>cd2022</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2022-03-30T16:15:36+08:00</updated><entry><title>2022 協同產品設計</title><link href="./w6_40923123.html" rel="alternate"></link><published>2022-03-30T11:00:00+08:00</published><updated>2022-03-30T16:15:36+08:00</updated><author><name>yen</name></author><id>tag:None,2022-03-30:./w6_40923123.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>cd2022</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2022-03-30T16:33:24+08:00</updated><entry><title>2022 協同產品設計</title><link href="./w6_40923123.html" rel="alternate"></link><published>2022-03-30T11:00:00+08:00</published><updated>2022-03-30T16:33:24+08:00</updated><author><name>yen</name></author><id>tag:None,2022-03-30:./w6_40923123.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 
 
@@ -17,5 +17,16 @@
 &lt;p&gt;我的想法目前也只能將此段訊息用一個程式幫忙賦予新的檔案讓他在出現類似錯誤時先直接開新的檔案紀錄下來，後面再進行除錯&lt;/p&gt;
 &lt;p&gt;第三種猜想(關於程式協同及機械類的協同
 課堂上老師說過程式協同其實相比於機械的協同是可以比較即時的，因為機械相關在協同是必須去與真實情況變動，並且機械及真實受限於很多的規則束腹很難做到非常及時的協同，畢竟很多零件並不像程式一樣隨叫隨到&lt;/p&gt;
-&lt;h2&gt;Flutter&lt;/h2&gt;
-&lt;p&gt;Flutter 可以用來開發跨 Apple 與 Android 手機與平板上的 Apps&lt;/p&gt;</content><category term="Misc"></category><category term="w6_40923123"></category></entry></feed>
+&lt;h2&gt;關於git指令失效&lt;/h2&gt;
+&lt;p&gt;事情緣由是由2022/03/22晚上在製作影片時發生目前還未知的問題進而導致git指令失效，目前推測原因還是未知，首先推送檔案並未超過(單個檔案&amp;gt;50MB，再者前面也有推送但是沒有問題，所以目前無法判斷有何種問題&lt;/p&gt;
+&lt;p&gt;解決方法: 將整個近端資料夾刪除後再從github上重新複製下來就沒有問題，關於git並未更改其他東西只是在其他電腦時就自行解決了，有可能是git在運行時path錯亂沒有讀到相關git的執行檔所以才導致至些問題的&lt;/p&gt;
+&lt;h2&gt;W3 NX教學影片製作&lt;/h2&gt;
+&lt;p&gt;第1部: &lt;a href="https://40923123.github.io/cd2022/downloads/2022031501.mp4"&gt;影片網址1&lt;/a&gt;
+第9部: &lt;a href="https://40923123.github.io/cd2022/downloads/2022031502.mp4"&gt;影片網址9&lt;/a&gt;
+第14部: &lt;a href="https://40923123.github.io/cd2022/downloads/2022032101.mp4"&gt;影片網址14&lt;/a&gt;
+第19部: &lt;a href="https://40923123.github.io/cd2022/downloads/2022032201.mp4"&gt;影片網址19&lt;/a&gt;
+第31部: &lt;a href="https://40923123.github.io/cd2022/downloads/2022032202.mp4"&gt;影片網址31&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;新增倉儲步驟&lt;/h2&gt;
+&lt;p&gt;原本cmsimde的內容主分支是master所以一開始他會因為遠端是main而無法推送，所以在近端新增main分支並將master merge到main裡，先用git remote add origin建立連結，然後在main的情況下把遠端的 README.md給pull下來&lt;/p&gt;
+&lt;p&gt;簡單來說就是cmsimde本身是屬於master而遠端是main所以主要的大問題是處理分支衝突&lt;/p&gt;
+&lt;p&gt;下方有影片可以點進去看裡面有詳細步驟還有字幕&lt;/p&gt;</content><category term="Misc"></category><category term="w6_40923123"></category></entry></feed>

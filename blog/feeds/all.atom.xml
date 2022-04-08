@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>cd2022</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2022-03-30T16:33:24+08:00</updated><entry><title>2022 協同產品設計</title><link href="./w6_40923123.html" rel="alternate"></link><published>2022-03-30T11:00:00+08:00</published><updated>2022-03-30T16:33:24+08:00</updated><author><name>yen</name></author><id>tag:None,2022-03-30:./w6_40923123.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>cd2022</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2022-04-09T07:09:48+08:00</updated><entry><title>2022 協同產品設計</title><link href="./w6_40923123.html" rel="alternate"></link><published>2022-03-30T11:00:00+08:00</published><updated>2022-04-09T07:09:48+08:00</updated><author><name>yen</name></author><id>tag:None,2022-03-30:./w6_40923123.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 
 
@@ -29,4 +29,5 @@
 &lt;h2&gt;新增倉儲步驟&lt;/h2&gt;
 &lt;p&gt;原本cmsimde的內容主分支是master所以一開始他會因為遠端是main而無法推送，所以在近端新增main分支並將master merge到main裡，先用git remote add origin建立連結，然後在main的情況下把遠端的 README.md給pull下來&lt;/p&gt;
 &lt;p&gt;簡單來說就是cmsimde本身是屬於master而遠端是main所以主要的大問題是處理分支衝突&lt;/p&gt;
-&lt;p&gt;下方有影片可以點進去看裡面有詳細步驟還有字幕&lt;/p&gt;</content><category term="Misc"></category><category term="w6_40923123"></category></entry></feed>
+&lt;p&gt;下方有影片可以點進去看裡面有詳細步驟還有字幕
+測試字幕&lt;/p&gt;</content><category term="Misc"></category><category term="w6_40923123"></category></entry></feed>

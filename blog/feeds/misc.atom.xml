@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>cd2022 - Misc</title><link href="./" rel="alternate"></link><link href="./feeds/misc.atom.xml" rel="self"></link><id>./</id><updated>2022-04-17T12:15:04+08:00</updated><entry><title>2022 協同產品設計w8</title><link href="./midterm.html" rel="alternate"></link><published>2022-04-17T11:00:00+08:00</published><updated>2022-04-17T12:15:04+08:00</updated><author><name>40923123</name></author><id>tag:None,2022-04-17:./midterm.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>cd2022 - Misc</title><link href="./" rel="alternate"></link><link href="./feeds/misc.atom.xml" rel="self"></link><id>./</id><updated>2022-04-17T15:42:26+08:00</updated><entry><title>2022 協同產品設計w8</title><link href="./midterm.html" rel="alternate"></link><published>2022-04-17T11:00:00+08:00</published><updated>2022-04-17T15:42:26+08:00</updated><author><name>40923123</name></author><id>tag:None,2022-04-17:./midterm.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 
 
 &lt;h2&gt;關於w8&lt;/h2&gt;
 &lt;p&gt;w8的部分為將uram手臂放入coppeliasim去模擬並使用UI介面去控制網站裡有詳細的影片跟說明
-&lt;a href="https://40923123.github.io/cd2022/content/W8.html"&gt;w8&lt;/a&gt;&lt;/p&gt;</content><category term="Misc"></category><category term="midterm"></category></entry><entry><title>2022 協同產品設計w7</title><link href="./w7_summary.html" rel="alternate"></link><published>2022-04-09T11:00:00+08:00</published><updated>2022-04-09T08:33:18+08:00</updated><author><name>40923123</name></author><id>tag:None,2022-04-09:./w7_summary.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
+&lt;a href="https://40923123.github.io/cd2022/content/W8.html"&gt;w8&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;關於w8問題&lt;/h2&gt;
+&lt;p&gt;這禮拜發生很奇怪的事，一般正常在更改內容時因為再按上面的save時出現了錯誤
+然後就直接把我的USB直接退出掉，接下來再開他卻一直說過多訊息無法儲存，甚至
+還影響到連重新把倉儲clone下來都無法甚至直接把USB給退出掉，
+我直接換了另一個USB才將問題解決&lt;/p&gt;</content><category term="Misc"></category><category term="midterm"></category></entry><entry><title>2022 協同產品設計w7</title><link href="./w7_summary.html" rel="alternate"></link><published>2022-04-09T11:00:00+08:00</published><updated>2022-04-17T15:30:16+08:00</updated><author><name>40923123</name></author><id>tag:None,2022-04-09:./w7_summary.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 
 
 &lt;h2&gt;關於w7&lt;/h2&gt;
 &lt;p&gt;w7的內容主要為機械手臂的繪製以及利用模擬軟體進行模擬
-內容將會在此網頁做詳細解說&lt;a href="https://40923123.github.io/cd2022/content/W7.html"&gt;w7&lt;/a&gt;&lt;/p&gt;</content><category term="Misc"></category><category term="w7_summary"></category></entry><entry><title>2022 協同產品設計</title><link href="./w6_40923123.html" rel="alternate"></link><published>2022-03-30T11:00:00+08:00</published><updated>2022-04-09T07:09:48+08:00</updated><author><name>yen</name></author><id>tag:None,2022-03-30:./w6_40923123.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
+內容將會在此網頁做詳細解說&lt;a href="https://40923123.github.io/cd2022/content/W7.html"&gt;w7&lt;/a&gt;&lt;/p&gt;</content><category term="Misc"></category><category term="w7_summary"></category></entry><entry><title>2022 協同產品設計</title><link href="./w6_40923123.html" rel="alternate"></link><published>2022-03-30T11:00:00+08:00</published><updated>2022-04-17T15:30:16+08:00</updated><author><name>yen</name></author><id>tag:None,2022-03-30:./w6_40923123.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 
 

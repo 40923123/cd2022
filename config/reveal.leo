@@ -20,6 +20,7 @@
 <v t="leo.20200818170222.1"><vh>slides div</vh>
 <v t="leo.20200818170328.1"><vh>slide 1</vh></v>
 <v t="leo.20200818170535.1"><vh>slide 2</vh></v>
+<v t="leo.20220419193217.1"><vh>slide w8</vh></v>
 <v t="leo.20200818170636.1"><vh>slide3</vh>
 <v t="leo.20200818170909.1"><vh>slide 3-1</vh></v>
 <v t="leo.20200818170953.1"><vh>slide 3-2</vh></v>
@@ -657,5 +658,18 @@ console.log( '"customevent" has fired' );
         - &lt;a href="https://github.com/hakimel/reveal.js"&gt;Source code &amp;amp; documentation&lt;/a&gt;
     &lt;/p&gt;
 &lt;/section&gt;</t>
+<t tx="leo.20220419193217.1">&lt;section&gt;
+    &lt;h2&gt;第8周心得&lt;/h2&gt;
+    &lt;p&gt;
+        這周遇到了很多問題，從usb怪異自動退出到小組網站blog轉檔失敗說有空字節等
+        非常多的問題，也深刻的體會出電腦真的是一個很一板一眼的東西(程式也一樣)
+        但是也不斷的測試上網找答案求解，再到不斷的嘗試也讓我知道有些事情並不是
+        你說可以就可以，只要東西不是你發明的你就無法知道他的狀況
+        這周的操作流程已放在網頁上請點進去觀看
+        &lt;a href="https://40923123.github.io/cd2022/content/midterm.html"&gt;midterm&lt;/a&gt;
+    &lt;/p&gt;
+&lt;/section&gt;
+
+</t>
 </tnodes>
 </leo_file>

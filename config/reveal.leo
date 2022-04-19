@@ -219,9 +219,18 @@ vertical: body pane on the botton</t>
 
 </t>
 <t tx="leo.20200818170535.1">&lt;section&gt;
-    &lt;h2&gt;Hello There&lt;/h2&gt;
+    &lt;h2&gt;midterm&lt;/h2&gt;
     &lt;p&gt;
-        reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+        這禮拜為第8周，這禮拜主要的是進行以下3種事情
+        1. 利用onshape或者NX1980等繪圖軟體進行零件繪製
+        2. 將uram的零件匯入coppeliasim理進行模擬並添加UI介面去控制
+        3. 編輯reveal.leo以及撰寫blog等
+    &lt;/p&gt;
+    &lt;p&gt;
+    本人是以達成目標2後再將小組網站進行模擬，以及幫組員進行除錯，主導開會為這裡
+    敗的進度，還有目前也已支隨身碟的狀況是會明顯的影響隨身系統的使用程度的
+    我自己的心得是希望大家在編輯自己的倉儲前可以先建立一個測試倉儲去測試
+    本次插入電腦usb是否有接觸不良等狀況。
     &lt;/p&gt;
 &lt;/section&gt;
 

@@ -187,7 +187,7 @@ vertical: body pane on the botton</t>
     &lt;/p&gt;
     &lt;p&gt;
     本人是以達成目標2後再將小組網站進行模擬，以及幫組員進行除錯，主導開會為這裡
-    敗的進度，還有目前也已支隨身碟的狀況是會明顯的影響隨身系統的使用程度的
+    拜的進度，還有目前也已支隨身碟的狀況是會明顯的影響隨身系統的使用程度的
     我自己的心得是希望大家在編輯自己的倉儲前可以先建立一個測試倉儲去測試
     本次插入電腦usb是否有接觸不良等狀況。
     &lt;/p&gt;
@@ -201,8 +201,8 @@ vertical: body pane on the botton</t>
         非常多的問題，也深刻的體會出電腦真的是一個很一板一眼的東西(程式也一樣)
         但是也不斷的測試上網找答案求解，再到不斷的嘗試也讓我知道有些事情並不是
         你說可以就可以，只要東西不是你發明的你就無法知道他的狀況
-        這周的操作流程已放在網頁上請點進去觀看
-        &lt;a href="https://40923123.github.io/cd2022/content/midterm.html"&gt;midterm&lt;/a&gt;
+        &lt;small&gt;這周的操作流程已放在網頁上請點進去觀看
+        &lt;a href="https://40923123.github.io/cd2022/content/midterm.html"&gt;midterm&lt;/a&gt;&lt;/small&gt;
     &lt;/p&gt;
 &lt;/section&gt;
 

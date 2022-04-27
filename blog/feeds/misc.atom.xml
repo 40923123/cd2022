@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>cd2022 - Misc</title><link href="./" rel="alternate"></link><link href="./feeds/misc.atom.xml" rel="self"></link><id>./</id><updated>2022-04-20T08:27:24+08:00</updated><entry><title>2022 協同產品設計w8</title><link href="./midterm.html" rel="alternate"></link><published>2022-04-17T11:00:00+08:00</published><updated>2022-04-20T08:27:24+08:00</updated><author><name>40923123</name></author><id>tag:None,2022-04-17:./midterm.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>cd2022 - Misc</title><link href="./" rel="alternate"></link><link href="./feeds/misc.atom.xml" rel="self"></link><id>./</id><updated>2022-04-27T11:25:50+08:00</updated><entry><title>2022 協同產品設計w8</title><link href="./midterm.html" rel="alternate"></link><published>2022-04-17T11:00:00+08:00</published><updated>2022-04-20T08:27:24+08:00</updated><author><name>40923123</name></author><id>tag:None,2022-04-17:./midterm.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 
 
@@ -10,7 +10,87 @@
 &lt;p&gt;這禮拜發生很奇怪的事，一般正常在更改內容時因為再按上面的save時出現了錯誤
 然後就直接把我的USB直接退出掉，接下來再開他卻一直說過多訊息無法儲存，甚至
 還影響到連重新把倉儲clone下來都無法甚至直接把USB給退出掉，
-我直接換了另一個USB才將問題解決&lt;/p&gt;</content><category term="Misc"></category><category term="midterm"></category></entry><entry><title>2022 協同產品設計w7</title><link href="./w7_summary.html" rel="alternate"></link><published>2022-04-09T11:00:00+08:00</published><updated>2022-04-17T15:30:16+08:00</updated><author><name>40923123</name></author><id>tag:None,2022-04-09:./w7_summary.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
+我直接換了另一個USB才將問題解決&lt;/p&gt;</content><category term="Misc"></category><category term="midterm"></category></entry><entry><title>2022 協同產品設計w10</title><link href="./w10_block_ui.html" rel="alternate"></link><published>2022-04-17T11:00:00+08:00</published><updated>2022-04-27T11:25:50+08:00</updated><author><name>40923123</name></author><id>tag:None,2022-04-17:./w10_block_ui.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
+
+
+&lt;h2&gt;關於w10&lt;/h2&gt;
+&lt;p&gt;這禮拜w10是在說明nx1980裡有可以將尺寸更明顯化直觀的進行控制&lt;/p&gt;
+&lt;p&gt;&lt;link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css"&gt;&lt;/p&gt;
+&lt;script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+    "2": [
+      { type: "gotoframe", rect: { x: 865, y: 477, width: 60, height: 24 }, target: 3 },
+    ],
+    "242": [
+      { type: "gotoframe", rect: { x: 507, y: 375, width: 60, height: 24 }, target: 243 },
+      { type: "gotoframe", rect: { x: 434, y: 373, width: 60, height: 24 }, target: 2 },
+    ],
+    "348": [
+      { type: "gotoframe", rect: { x: 325, y: 549, width: 60, height: 24 }, target: 349 },
+      { type: "gotoframe", rect: { x: 252, y: 550, width: 60, height: 24 }, target: 242 },
+    ],
+    "366": [
+      { type: "gotoframe", rect: { x: 337, y: 477, width: 60, height: 24 }, target: 367 },
+      { type: "gotoframe", rect: { x: 271, y: 475, width: 60, height: 24 }, target: 348 },
+    ],
+    "414": [
+      { type: "gotoframe", rect: { x: 408, y: 341, width: 60, height: 24 }, target: 415 },
+      { type: "gotoframe", rect: { x: 342, y: 341, width: 60, height: 24 }, target: 366 },
+    ],
+    "433": [
+      { type: "gotoframe", rect: { x: 600, y: 520, width: 60, height: 24 }, target: 434 },
+      { type: "gotoframe", rect: { x: 528, y: 520, width: 60, height: 24 }, target: 414 },
+    ],
+    "491": [
+      { type: "gotoframe", rect: { x: 424, y: 186, width: 60, height: 24 }, target: 492 },
+      { type: "gotoframe", rect: { x: 355, y: 186, width: 60, height: 24 }, target: 433 },
+    ],
+    "608": [
+      { type: "gotoframe", rect: { x: 503, y: 179, width: 60, height: 24 }, target: 609 },
+      { type: "gotoframe", rect: { x: 427, y: 180, width: 60, height: 24 }, target: 491 },
+    ],
+    "700": [
+      { type: "gotoframe", rect: { x: 451, y: 270, width: 60, height: 24 }, target: 701 },
+      { type: "gotoframe", rect: { x: 380, y: 271, width: 60, height: 24 }, target: 608 },
+    ],
+    "753": [
+      { type: "gotoframe", rect: { x: 344, y: 126, width: 60, height: 24 }, target: 754 },
+      { type: "gotoframe", rect: { x: 273, y: 124, width: 60, height: 24 }, target: 700 },
+    ],
+    "805": [
+      { type: "gotoframe", rect: { x: 925, y: 513, width: 60, height: 24 }, target: 806 },
+      { type: "gotoframe", rect: { x: 857, y: 513, width: 60, height: 24 }, target: 753 },
+    ],
+    "1190": [
+      { type: "gotoframe", rect: { x: 689, y: 301, width: 60, height: 24 }, target: 1191 },
+      { type: "gotoframe", rect: { x: 614, y: 300, width: 60, height: 24 }, target: 805 },
+    ],
+    "1234": [
+      { type: "gotoframe", rect: { x: 797, y: 210, width: 60, height: 24 }, target: 1235 },
+      { type: "gotoframe", rect: { x: 723, y: 211, width: 60, height: 24 }, target: 1190 },
+    ],
+  },
+};
+&lt;/script&gt;
+&lt;div class="winkVideoContainerClass"&gt;&lt;video width="1008" height="630" class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData"&gt;
+&lt;source src="./../downloads/w10_block_ui.mp4" type="video/mp4" /&gt;&lt;/video&gt;
+&lt;div class="winkVideoOverlayClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarClass"&gt;&lt;button class="winkVideoControlBarPlayButtonClass"&gt;&lt;/button&gt; &lt;button class="winkVideoControlBarPauseButtonClass"&gt;&lt;/button&gt;
+&lt;div class="winkVideoControlBarProgressLeftClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressEmptyMiddleClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressRightClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressFilledMiddleClass"&gt;&lt;/div&gt;
+&lt;div class="winkVideoControlBarProgressThumbClass"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="winkVideoPlayOverlayClass"&gt;&lt;/div&gt;
+&lt;/div&gt;</content><category term="Misc"></category><category term="w10_block_ui"></category></entry><entry><title>2022 協同產品設計w7</title><link href="./w7_summary.html" rel="alternate"></link><published>2022-04-09T11:00:00+08:00</published><updated>2022-04-17T15:30:16+08:00</updated><author><name>40923123</name></author><id>tag:None,2022-04-09:./w7_summary.html</id><summary type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2022 協同產品設計課程&lt;/p&gt;
 
 

@@ -149,9 +149,22 @@ img.add_border {
 <h4>步驟解說篇</h4>
 <p>在步驟前必須先完成以下步驟</p>
 <p>1.必須每個成員先將大組倉儲給<span style="background-color: #ff0000;">fork</span>，這樣就能獲得一個<span style="background-color: #00ffff;">自己帳號</span>的大組倉儲</p>
-<p>2.clone<span style="background-color: #00ffff;">自己帳號</span>的倉儲</p>
+<p>2.clone<span style="background-color: #00ffff;">自己帳號</span>的大組倉儲</p>
 <p>3.將倉儲內推送時的person key或者使用ssh的小夥伴必須將.git裡的內容修改成如同自己倉出一樣</p>
-<p>這樣就算完成了前置步驟了</p><br />About << <a href='About.html'>Previous</a> <a href='w10_block_ui.html'>Next</a> >> w10_block_ui</div>
+<p>這樣就算完成了前置步驟了</p>
+<h5>再來以下正式進入步驟</h5>
+<p>1.更改完自己想要的內容後先用正常手續將內容推送至<span style="background-color: #00ffff;">自己帳號</span>下的大組倉儲</p>
+<p>2.在github上選擇Pull requests的按鍵</p>
+<p>3.將merge的消息傳回給組長的大組倉儲(綠綠的給他按下去就對了</p>
+<p>4.組長查驗確認沒問題即可merge</p>
+<p>以上即是正常流程下最順利的狀況，接下來會稍微說明版本同步問題以及merge的衝突問題以及如何解決</p>
+<h5>首先當近端及遠端的部分不同步</h5>
+<p>因當先將github上的版本給同步，在觀察commit那一欄要是組長倉儲有更新那裏就可以更新版本</p>
+<p>變成和組長一樣，再來在近端用git pull將資料從遠端給抓下來做合併，這樣就完成了最簡單的更新自己的倉儲了。</p>
+<p>那如果在github上無法合併可以怎麼做呢? 那說明一件事你在進行merge時跟別人衝突到或者格是有問題之類的，簡單來說就是有問題之後沒更改之後又繼續更新所導致的，那可以試試以下的方法</p>
+<p><img alt="" height="420" src="./../images/hywuwlrcaQ.png" width="800"/></p>
+<p>前面有說道能使用git pull進行同步，但是如果自己帳號下github的資料就不對了就算git pull也沒辦法那就使用<span style="background-color: #00ff00;">git pull 組長大組倉儲網址.git main</span></p>
+<p>將正確內容最新版本同步下來後重新push一次到<span style="background-color: #00ffff;">自己帳號</span>下的大組倉儲，這樣就可以將遠端成功更新成正確的版本了</p><br />About << <a href='About.html'>Previous</a> <a href='w10_block_ui.html'>Next</a> >> w10_block_ui</div>
         
     <!-- footer -->
       <div class="container">

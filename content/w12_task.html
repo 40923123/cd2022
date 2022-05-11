@@ -1,0 +1,293 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cmsimde_site</title>
+        <meta charset="utf-8">
+<meta property="head" content="H2">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 -->
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container-fluid'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>40923123 cd2022</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40923123 cd2022</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='W12.html'>W12</a><ul class='dropdown'><li><a href='w12_task.html'>w12_task</a></li></ul><li><a href='大組倉儲更新步驟.html'>大組倉儲更新步驟</a><li><a href='w10_block_ui.html'>w10_block_ui</a><li><a href='midterm.html'>midterm</a><li><a href='W7.html'>W7</a><li class='has-children'><a href='問題集中串.html'>問題集中串</a><ul class='dropdown'><li><a href='關於協同.html'>關於協同</a><li><a href='關於git指令失效.html'>關於git指令失效</a></li></ul><li><a href='W3.html'>W3</a><li><a href='小組名單.html'>小組名單</a><li><a href='新增倉儲步驟.html'>新增倉儲步驟</a><li><a href='wink test.html'>wink test</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">W12 << <a href='W12.html'>Previous</a> <a href='大組倉儲更新步驟.html'>Next</a> >> 大組倉儲更新步驟<br /><h1>w12_task</h1>
+<p></p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+    "2": [
+      { type: "gotoframe", rect: { x: 842, y: 233, width: 60, height: 24 }, target: 3 },
+    ],
+    "52": [
+      { type: "gotoframe", rect: { x: 905, y: 366, width: 60, height: 24 }, target: 53 },
+      { type: "gotoframe", rect: { x: 838, y: 368, width: 60, height: 24 }, target: 2 },
+    ],
+    "87": [
+      { type: "gotoframe", rect: { x: 884, y: 366, width: 60, height: 24 }, target: 88 },
+      { type: "gotoframe", rect: { x: 805, y: 365, width: 60, height: 24 }, target: 52 },
+    ],
+    "142": [
+      { type: "gotoframe", rect: { x: 897, y: 280, width: 60, height: 24 }, target: 143 },
+      { type: "gotoframe", rect: { x: 828, y: 278, width: 60, height: 24 }, target: 87 },
+    ],
+    "163": [
+      { type: "gotoframe", rect: { x: 750, y: 335, width: 60, height: 24 }, target: 164 },
+      { type: "gotoframe", rect: { x: 667, y: 337, width: 60, height: 24 }, target: 142 },
+    ],
+    "186": [
+      { type: "gotoframe", rect: { x: 473, y: 442, width: 60, height: 24 }, target: 187 },
+      { type: "gotoframe", rect: { x: 402, y: 439, width: 60, height: 24 }, target: 163 },
+    ],
+    "213": [
+      { type: "gotoframe", rect: { x: 844, y: 546, width: 60, height: 24 }, target: 214 },
+      { type: "gotoframe", rect: { x: 769, y: 545, width: 60, height: 24 }, target: 186 },
+    ],
+    "225": [
+      { type: "gotoframe", rect: { x: 667, y: 568, width: 60, height: 24 }, target: 226 },
+      { type: "gotoframe", rect: { x: 595, y: 568, width: 60, height: 24 }, target: 213 },
+    ],
+    "254": [
+      { type: "gotoframe", rect: { x: 885, y: 568, width: 60, height: 24 }, target: 255 },
+      { type: "gotoframe", rect: { x: 813, y: 567, width: 60, height: 24 }, target: 225 },
+    ],
+    "287": [
+      { type: "gotoframe", rect: { x: 677, y: 531, width: 60, height: 24 }, target: 288 },
+      { type: "gotoframe", rect: { x: 608, y: 532, width: 60, height: 24 }, target: 254 },
+    ],
+    "339": [
+      { type: "gotoframe", rect: { x: 826, y: 389, width: 60, height: 24 }, target: 340 },
+      { type: "gotoframe", rect: { x: 756, y: 391, width: 60, height: 24 }, target: 287 },
+    ],
+    "375": [
+      { type: "gotoframe", rect: { x: 901, y: 297, width: 60, height: 24 }, target: 376 },
+      { type: "gotoframe", rect: { x: 830, y: 299, width: 60, height: 24 }, target: 339 },
+    ],
+    "416": [
+      { type: "gotoframe", rect: { x: 727, y: 265, width: 60, height: 24 }, target: 417 },
+      { type: "gotoframe", rect: { x: 659, y: 266, width: 60, height: 24 }, target: 375 },
+    ],
+    "468": [
+      { type: "gotoframe", rect: { x: 852, y: 560, width: 60, height: 24 }, target: 469 },
+      { type: "gotoframe", rect: { x: 785, y: 561, width: 60, height: 24 }, target: 416 },
+    ],
+    "498": [
+      { type: "gotoframe", rect: { x: 653, y: 237, width: 60, height: 24 }, target: 499 },
+      { type: "gotoframe", rect: { x: 588, y: 237, width: 60, height: 24 }, target: 468 },
+    ],
+    "516": [
+      { type: "gotoframe", rect: { x: 818, y: 464, width: 60, height: 24 }, target: 517 },
+      { type: "gotoframe", rect: { x: 746, y: 463, width: 60, height: 24 }, target: 498 },
+    ],
+    "546": [
+      { type: "gotoframe", rect: { x: 859, y: 490, width: 60, height: 24 }, target: 547 },
+      { type: "gotoframe", rect: { x: 781, y: 489, width: 60, height: 24 }, target: 516 },
+    ],
+    "567": [
+      { type: "gotoframe", rect: { x: 809, y: 417, width: 60, height: 24 }, target: 568 },
+      { type: "gotoframe", rect: { x: 735, y: 417, width: 60, height: 24 }, target: 546 },
+    ],
+    "586": [
+      { type: "gotoframe", rect: { x: 813, y: 548, width: 60, height: 24 }, target: 587 },
+      { type: "gotoframe", rect: { x: 749, y: 548, width: 60, height: 24 }, target: 567 },
+    ],
+    "598": [
+      { type: "gotoframe", rect: { x: 799, y: 540, width: 60, height: 24 }, target: 586 },
+    ],
+  },
+};
+</script>
+<div class="winkVideoContainerClass"><video class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="630" width="1008">
+<source src="./../downloads/w12_task.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div><br />W12 << <a href='W12.html'>Previous</a> <a href='大組倉儲更新步驟.html'>Next</a> >> 大組倉儲更新步驟</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

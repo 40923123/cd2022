@@ -1,6 +1,20 @@
 <h1>About</h1>
 <p>cmsimde_site</p>
-<h1>w14零件檔</h1>
+<h1>W15</h1>
+<p>這一周主要是針對uarm在nx裡組立後再用coppliasim進行程式模擬</p>
+<p>以下是手臂的程式</p>
+<p>-------------------------------------------------------------------------------------------------------</p>
+<p>function sysCall_init()<br/> axis1=sim.getObject('/motor1')    <br/> axis2=sim.getObject('/motor2')<br/> axis3=sim.getObject('/motor6')<br/> suctionPad=sim.getObject('/suctionPad')<br/> rotation1 = 0<br/> rotation2 = 0<br/> rotation3 = 0<br/> deg = math.pi/180.<br/> enableSuctionPad(true)<br/>end<br/>function enableSuctionPad(enable)<br/> -- use the suctionPad object to pass the variable activity value<br/> -- if enable = true, the activity = 'on'<br/> if enable then<br/> sim.writeCustomDataBlock(suctionPad,'activity','on')<br/> else<br/> sim.writeCustomDataBlock(suctionPad,'activity','off')<br/> end<br/>end<br/>function sysCall_actuation() <br/>--[[<br/> rotation1 = rotation1 + 1*deg<br/> print(rotation1)<br/> sim.setJointPosition(axis1, -rotation1)<br/> sim.setJointPosition(axis2, -rotation1)<br/>]]<br/> message, auxiliaryData=sim.getSimulatorMessage()<br/> while message ~= -1 do<br/> key=auxiliaryData[1]<br/> sim.addStatusbarMessage('user press key:'..key)<br/> if (message==sim.message_keypress) then<br/> --if (auxiliaryData[1]==112) then --p activate the suction pad<br/> if (auxiliaryData[1]==string.byte('p')) then<br/> -- if key p pressed activate the suction mode<br/>--sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','true')<br/> enableSuctionPad(true)<br/> end -- if p<br/> if (auxiliaryData[1]==string.byte('q')) then --q deactivate the suction pad<br/> -- if key q pressed deactivate the suction mode<br/>--sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','false')<br/> enableSuctionPad(false)<br/> end -- if q<br/> if (auxiliaryData[1]==string.byte('k')) then --k right turn in degree<br/> -- if key k pressed axis1 angle adds 2 degrees<br/> rotation1 = rotation1 + 1*deg<br/> --sim.setJointPosition(axis1, rotation1)<br/> sim.setJointTargetPosition(axis1, rotation1)<br/> end -- if k<br/> if (auxiliaryData[1]==string.byte('l')) then --l left turn in degree<br/> -- if key l pressed axis1 angle substract 2 degrees<br/> rotation1 = rotation1 - 1*deg<br/> --sim.setJointPosition(axis1, rotation1)<br/> sim.setJointTargetPosition(axis1, rotation1)<br/> end -- if l<br/>-- for joint2 start ##########################################################<br/> if (auxiliaryData[1]== string.byte("h")) then --r right turn in degree<br/> -- if key r pressed axis1 angle adds 2 degrees<br/> rotation2 = rotation2 + 1*deg<br/> --sim.setJointPosition(axis2, rotation2)<br/> sim.setJointTargetPosition(axis2, rotation2)<br/> end -- if k<br/> if (auxiliaryData[1]==string.byte("j")) then<br/> -- if key j pressed axis2 angle substract 2 degrees<br/> rotation2 = rotation2 - 1*deg<br/> --sim.setJointPosition(axis2, rotation2)<br/> sim.setJointTargetPosition(axis2, rotation2)<br/> end -- if j<br/>-- for joint2 end ##########################################################<br/>-- for joint3 start ##########################################################<br/> if (auxiliaryData[1]== string.byte("f")) then<br/> -- if key f pressed axis3 angle adds 2 degrees<br/> rotation3 = rotation3 + 1*deg<br/> --sim.setJointPosition(axis3, rotation3)<br/> sim.setJointTargetPosition(axis3, rotation3)<br/> end -- if f<br/> if (auxiliaryData[1]==string.byte("g")) then<br/> -- if key g pressed axis3 angle substract 2 degrees<br/> rotation3 = rotation3 - 1*deg<br/> --sim.setJointPosition(axis3, rotation3)<br/> sim.setJointTargetPosition(axis3, rotation3)<br/> end -- if g<br/>-- for joint2 end ##########################################################<br/> if (auxiliaryData[1]==100) then --d suction pad down<br/> -- if key d pressed axis3 will down 0.05 m<br/> distance3 = distance3 - 0.05<br/> sim.setJointPosition(axis3, distance3)<br/> end -- if d<br/> if (auxiliaryData[1]==117) then --u suction pad up<br/> -- if key u pressed axis3 will up 0.05 m<br/> distance3 = distance3 + 0.05<br/> sim.setJointPosition(axis3, distance3)<br/> end -- if u<br/> if (auxiliaryData[1]==99) then --c coordinate of block<br/> blockPosition = sim.getObjectPosition(block, BaseFrame)<br/> sim.addStatusbarMessage("coordinate:"..table_to_string(blockPosition))<br/> end --if c<br/> end -- if<br/> message, auxiliaryData=sim.getSimulatorMessage()<br/> end -- while<br/>end -- function</p>
+<p>function sysCall_sensing() <br/>--[[<br/> -- Read Proximity sensor (0= nothing detected, 1 = object detected)<br/> local res = sim.readProximitySensor(proximity)</p>
+<p>-- Check if possible to insert an new box<br/> if (sim.getSimulationTime()-T_last_inserted &gt; T_insert) and not hasStopped then<br/> insertBox()<br/> end</p>
+<p>-- If proximity sensor detects an object, stop the belt, stop inserting objects<br/> if res == 1 and not hasStopped then<br/> if boolList[1] then<br/> sim.setScriptSimulationParameter(sim.handle_self,"conveyorBeltVelocity",0)<br/> deltaTime = sim.getSimulationTime()-T_last_inserted<br/> hasStopped = true<br/> else<br/> local box = table.remove(boxList,1)<br/> local boxDummy = table.remove(boxDummyList,1)<br/> table.remove(boolList,1)</p>
+<p>sim.removeObject(box)<br/> sim.removeObject(boxDummy)<br/> end<br/> end</p>
+<p>-- If proximity sensor detects nothing and belt has stopped, start belt, continue inserting<br/> if res == 0 and hasStopped then<br/> sim.setScriptSimulationParameter(sim.handle_self,"conveyorBeltVelocity",beltSpeed)<br/> hasStopped = false<br/> T_last_inserted = sim.getSimulationTime()-deltaTime<br/> end<br/> <br/>]]--<br/>end<br/>function sysCall_sensing()<br/> -- put your sensing code here<br/>end<br/>function sysCall_cleanup()<br/> -- do some clean-up here<br/>end<br/>-- Convert a lua table into a lua syntactically correct string<br/>function table_to_string(tbl)<br/> local result = "{"<br/> for k, v in pairs(tbl) do<br/> -- Check the key type (ignore any numerical keys - assume its an array)<br/> if type(k) == "string" then<br/> result = result.."[\""..k.."\"]".."="<br/> end<br/> -- Check the value type<br/> if type(v) == "table" then<br/> result = result..table_to_string(v)<br/> elseif type(v) == "boolean" then<br/> result = result..tostring(v)<br/> else<br/> v = round(v, 4)<br/> result = result.."\""..v.."\""<br/> end<br/> result = result..","<br/> end<br/> -- Remove leading commas from the result<br/> if result ~= "" then<br/> result = result:sub(1, result:len()-1)<br/> end<br/> return result.."}"<br/>end<br/>function round(x, n)<br/> n = math.pow(10, n or 0)<br/> x = x * n<br/> if x &gt;= 0 then x = math.floor(x + 0.5) else x = math.ceil(x - 0.5) end<br/> return x / n<br/>end<br/>function insertBox()<br/> -- Generate random numbers<br/> local rand1 = math.random()<br/> local rand2 = math.random()<br/> local rand3 = math.random()<br/> -- Generate random disturbances on position and orientation<br/> local dx = (2*rand1-1)*0.1<br/> local dy = (2*rand2-1)*0.1<br/> local dphi = (2*rand3-1)*0.5<br/> local disturbedCoordinates = {0,0,0}<br/> disturbedCoordinates[1] = insertCoordinate[1]+dx<br/> disturbedCoordinates[2] = insertCoordinate[2]+dy<br/> disturbedCoordinates[3] = insertCoordinate[3]<br/> -- Copy and paste box and boxDummy<br/> local insertedObjects = sim.copyPasteObjects({box,boxDummy},0)<br/> -- Update last inserted box time<br/> T_last_inserted = sim.getSimulationTime()<br/> -- Move and rotate<br/> sim.setObjectPosition(insertedObjects[1],-1,disturbedCoordinates)<br/> sim.setObjectOrientation(insertedObjects[1],-1,{0,0,dphi})<br/> -- Store handles to boxes and dummies<br/> table.insert(boxList,insertedObjects[1])<br/> table.insert(boxDummyList,insertedObjects[2]) <br/> -- Decide if object is good or bad<br/> local decision = math.random() <br/> if decision &lt;= goodPercentage then<br/> -- Object is good, assign goodColor<br/> sim.setShapeColor(insertedObjects[1],nil,sim.colorcomponent_ambient_diffuse,goodColor)<br/> table.insert(boolList,true)<br/> else<br/> -- Object is bad, assign random color<br/> sim.setShapeColor(insertedObjects[1],nil,sim.colorcomponent_ambient_diffuse,{rand1,rand2,rand3})<br/> table.insert(boolList,false)<br/> end<br/>end<br/>-- See the user manual or the available code snippets for additional callback functions and details</p>
+<p>-------------------------------------------------------------------------------------------------------</p>
+<p>主要就是其中關於軸的設定像是前半段這三行</p>
+<p><span>axis1=sim.getObject('/motor1')    </span><br/><span>axis2=sim.getObject('/motor2')</span><br/><span>axis3=sim.getObject('/motor6')</span></p>
+<p><span>這幾行主要應該是在uarm裡軸的設定，以及中間有一部分則是控制軸控制的角度及移動方式等</span></p>
+<p><span>針對設定的三個軸進行參數設定</span></p><h1>w14零件檔</h1>
 <p>此為第5組大家目前已畫出的NX1980版本的零件檔</p>
 <p><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/40923123_gm_nfu_edu_tw/EYx-7iGqUOpHgmx6H5FDflMBMdxn9IAgajGeuEsR1MGUYw?e=EoPzdn">1.prt</a></p>
 <p><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/40923123_gm_nfu_edu_tw/EQj3QrfN2utJu2kFJcO7EMUBKnkAK3ur5tcEmuY_05GWPw?e=beLnyG">2.prt</a></p>
@@ -12,16 +26,20 @@
 <p><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/40923123_gm_nfu_edu_tw/EYzWs6-NMDpIuztd82MPftMB7-7Kbf8yUeeyNx5RvxwOQA?e=Z8nWvB">10.prt</a></p>
 <p><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/40923123_gm_nfu_edu_tw/Ed4yc37PLkNBssJNf5PCKIEBljaoP3MoZqNk0bcxUl5SUw?e=0hijZ5">11.prt</a></p>
 <p><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/40923123_gm_nfu_edu_tw/EStylC_ZtTRGmgT3C40DDTQB-NIJh5ZOlQyQAT_Z6uOBNg?e=YPjY3K">12.prt</a></p>
+<p><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/40923123_gm_nfu_edu_tw/EaKqd3QaNe1Amx66aiHTvXIB53UVCIxaootKCGJ817sKkA?e=68vkzq">13.prt</a></p>
+<p><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/40923123_gm_nfu_edu_tw/EV7_-kriPfpJrDQsMyq_CQABNJOpi7x1G4tN80ZFTKDB2Q?e=akNcam">14.prt</a></p>
 <p><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/40923123_gm_nfu_edu_tw/EbmXV9b1NuZMnobWV_XzLzQBmn5UQ2pDds9RL9GZYOR7QQ?e=w58XWh">15.prt</a></p>
 <p>分配名單為下圖某一次開會決定</p>
-<p><img alt="" height="450" src="/images/unknown.png" width="800"/></p><h1>W14</h1>
+<p><img alt="" height="450" src="/images/unknown.png" width="800"/></p>
+<h1>W14</h1>
 <p>這一周基本瞭解到了uarm的一些做控制以及NX關於如何使用程式去控制尺寸的內容，</p>
 <p>還有將簡易的圖分給各組員畫，會再將各組員的圖統整在這裡的</p>
 <p>40923123</p>
 <p>零件9: <a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/40923123_gm_nfu_edu_tw/EewZMS65F4JJir1j3qfx8O8B5BD82U-amtB_EuYKYTgTog?e=g9RSIH">9.prt</a></p>
 <p>零件10: <a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/40923123_gm_nfu_edu_tw/EYzWs6-NMDpIuztd82MPftMB7-7Kbf8yUeeyNx5RvxwOQA?e=bghWbk">10.prt</a></p>
 <p>這週學習影片的網址: <a href="https://youtu.be/zCb26YXKSr8">https://youtu.be/zCb26YXKSr8</a></p>
-<p></p><h1>W12</h1>
+<p></p>
+<h1>W12</h1>
 <p>此為第12周內容</p>
 <p>各分組在執行<span> </span><a href="https://mde.tw/cd2022_guide/content/w8%20%E4%BB%BB%E5%8B%99.html">w8 任務</a>之後, 請回答下列問題:</p>
 <ol>
@@ -67,8 +85,7 @@ var winkVideoData = {
 };
 </script>
 <div class="winkVideoContainerClass"><video class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="630" width="1008">
-<source src="./../downloads/w12_cadlab_startup.mp4" type="video/mp4"/>
-</video>
+<source src="./../downloads/w12_cadlab_startup.mp4" type="video/mp4"/></video>
 <div class="winkVideoOverlayClass"></div>
 <div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
 <div class="winkVideoControlBarProgressLeftClass"></div>
@@ -78,7 +95,8 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
-</div><h2>w12_task</h2>
+</div>
+<h2>w12_task</h2>
 <p></p>
 <script>
 var winkVideoData = {
@@ -179,7 +197,8 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
-</div><h1>大組倉儲更新步驟</h1>
+</div>
+<h1>大組倉儲更新步驟</h1>
 <p>這一頁會講解應該如何更新大組倉儲步驟跟必須知道的東西</p>
 <p>首先在開始之前大家其實可以觀察一下你每次在更新網站也就是利用cmsimde時就竟都更改些什麼東西呢?</p>
 <p><img alt="" height="107" src="/images/RFcIdso85a.png" width="750"/></p>
@@ -204,7 +223,8 @@ var winkVideoData = {
 <p>那如果在github上無法合併可以怎麼做呢? 那說明一件事你在進行merge時跟別人衝突到或者格是有問題之類的，簡單來說就是有問題之後沒更改之後又繼續更新所導致的，那可以試試以下的方法</p>
 <p><img alt="" height="420" src="/images/hywuwlrcaQ.png" width="800"/></p>
 <p>前面有說道能使用git pull進行同步，但是如果自己帳號下github的資料就不對了就算git pull也沒辦法那就使用<span style="background-color: #00ff00;">git pull 組長大組倉儲網址.git main</span></p>
-<p>將正確內容最新版本同步下來後重新push一次到<span style="background-color: #00ffff;">自己帳號</span>下的大組倉儲，這樣就可以將遠端成功更新成正確的版本了</p><h1>w10_block_ui</h1>
+<p>將正確內容最新版本同步下來後重新push一次到<span style="background-color: #00ffff;">自己帳號</span>下的大組倉儲，這樣就可以將遠端成功更新成正確的版本了</p>
+<h1>w10_block_ui</h1>
 <p>第一部加上一些註解的影片</p>
 <p></p>
 <script>
@@ -279,7 +299,8 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
-</div><h1>midterm</h1>
+</div>
+<h1>midterm</h1>
 <p>這禮拜主要是先畫圖再進行組立然後放置coppeliasim進行模擬，再加上3軸UI介面進行控制</p>
 <p>在進行coppeliasim模擬有以下幾點要注意</p>
 <p>1軸在模擬時需增加轉速和扭力給他</p>
@@ -319,7 +340,8 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
-</div><h1>W7</h1>
+</div>
+<h1>W7</h1>
 <p>老師課程網頁內容 <a href="https://mde.tw/cd2022_guide/content/w7%20%E4%BB%BB%E5%8B%99.html">網址</a></p>
 <p>接下來會有wink影片進行解說</p>
 <p></p>
@@ -374,7 +396,8 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
-</div><h1>問題集中串</h1>
+</div>
+<h1>問題集中串</h1>
 <p>最後更新:2022/03/27</p>
 <h2>關於協同</h2>
 <p>這一篇是我關於協同部分所寫的文章(僅供個人思想</p>
@@ -389,9 +412,11 @@ var winkVideoData = {
 <p>2.第二種強況如在修改的檔案被人刪除時應該怎麼辦，簡單來說每則訊息甚至檔案都是有所謂的贆投如果今天在修改時標頭不見時會讓檔案無法分類進而導致錯亂，關於標題頭問題我之前有遇到類似的，USB裡的檔案貌似在退出時手續不對導致標題頭遺失，電腦沒有辦法綁資料分類導致所有相關檔案全部變成亂碼並且無法判斷數量及大小，目前個人猜想如果在編輯檔案時直接被其他人刪除時，在推送時應該會出現類似的問題，要修改的檔案被刪除電腦無法判斷訊息是被歸類在哪裡進而出現錯誤</p>
 <p>我的想法目前也只能將此段訊息用一個程式幫忙賦予新的檔案讓他在出現類似錯誤時先直接開新的檔案紀錄下來，後面再進行除錯</p>
 <h4>第三種猜想(關於程式協同及機械類的協同</h4>
-<p>課堂上老師說過程式協同其實相比於機械的協同是可以比較即時的，因為機械相關在協同是必須去與真實情況變動，並且機械及真實受限於很多的規則束腹很難做到非常及時的協同，畢竟很多零件並不像程式一樣隨叫隨到</p><h2>關於git指令失效</h2>
+<p>課堂上老師說過程式協同其實相比於機械的協同是可以比較即時的，因為機械相關在協同是必須去與真實情況變動，並且機械及真實受限於很多的規則束腹很難做到非常及時的協同，畢竟很多零件並不像程式一樣隨叫隨到</p>
+<h2>關於git指令失效</h2>
 <p>事情緣由是由2022/03/22晚上在製作影片時發生目前還未知的問題進而導致git指令失效，目前推測原因還是未知，首先推送檔案並未超過(單個檔案&gt;50MB，再者前面也有推送但是沒有問題，所以目前無法判斷有何種問題</p>
-<p>解決方法: 將整個近端資料夾刪除後再從github上重新複製下來就沒有問題，關於git並未更改其他東西只是在其他電腦時就自行解決了，有可能是git在運行時path錯亂沒有讀到相關git的執行檔所以才導致至些問題的</p><h1>W3</h1>
+<p>解決方法: 將整個近端資料夾刪除後再從github上重新複製下來就沒有問題，關於git並未更改其他東西只是在其他電腦時就自行解決了，有可能是git在運行時path錯亂沒有讀到相關git的執行檔所以才導致至些問題的</p>
+<h1>W3</h1>
 <p>我負責的影片為5部:</p>
 <p>第1部: <a href="https://www.youtube.com/watch?v=GUaa97tALxE&amp;list=PLzEsJue49U_EMMv0eBo8MNJjJOq_WHCrl&amp;index=1">影片網址</a></p>
 <script>
@@ -829,8 +854,7 @@ var winkVideoData5 = {
 };
 </script>
 <div class="winkVideoContainerClass"><video class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData5" height="614" width="1342">
-<source src="./../downloads/2022032202.mp4" type="video/mp4"/>
-</video>
+<source src="./../downloads/2022032202.mp4" type="video/mp4"/></video>
 <div class="winkVideoOverlayClass"></div>
 <div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
 <div class="winkVideoControlBarProgressLeftClass"></div>
@@ -840,7 +864,8 @@ var winkVideoData5 = {
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
-</div><h1>小組名單</h1>
+</div>
+<h1>小組名單</h1>
 <p>組長: 40923123林坪橙  </p>
 <p><a href="https://40923123.github.io/cd2022/content/index.html">網站</a>  <a href="https://github.com/40923123/cd2022">倉儲</a></p>
 <p>組員: 40923139夏永晉</p>
@@ -848,12 +873,14 @@ var winkVideoData5 = {
 <p>組員: 40923142翁楷翔</p>
 <p><a href="https://40923142.github.io/cd2022/content/index.html">網站</a>  <a href="https://github.com/40923142/cd2022">倉儲</a></p>
 <p>組員: 40923151許睿麒</p>
-<p><a href="https://40923151.github.io/cd2022/content/index.html">網站</a>  <a href="https://github.com/40923151/cd2022">倉儲</a></p><h1>新增倉儲步驟</h1>
+<p><a href="https://40923151.github.io/cd2022/content/index.html">網站</a>  <a href="https://github.com/40923151/cd2022">倉儲</a></p>
+<h1>新增倉儲步驟</h1>
 <p><span>原本cmsimde的內容主分支是master所以一開始他會因為遠端是main而無法推送，所以在近端新增main分支並將master merge到main裡，先用git remote add origin建立連結，然後在main的情況下把遠端的 README.md給pull下來</span></p>
 <p><span>簡單來說就是cmsimde本身是屬於master而遠端是main所以主要的大問題是處理分支衝突</span></p>
 <p><span>下方有影片可以點進去看裡面有詳細步驟還有字幕</span></p>
 <p><span>test</span></p>
-<p><a href="https://youtu.be/KvxfZZtoF40">影片連結</a></p><h1>wink test</h1>
+<p><a href="https://youtu.be/KvxfZZtoF40">影片連結</a></p>
+<h1>wink test</h1>
 <script>
 var winkVideoData = {
   dataVersion: 1,
